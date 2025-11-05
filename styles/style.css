@@ -49,3 +49,54 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+
+.page {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  gap: 30px;
+} 
+
+.result {
+  padding-top: 211px;
+  align-content: flex-end;
+}
+
+.result__video-container {
+  gap: 16px;
+  height: 386px;
+  width: 711px;
+}
+
+.result__video {
+  object-fit: contain; /* РАСТЯНУТЬ ВИДЕО */
+}
+.content__details {
+  align-content: flex-end;
+  width: 100%;
+}
+
+.title {
+  padding-top: 133px;
+  padding-bottom: 26px;
+}
+
+.content__list-container {
+  height: 298px;
+  overflow: scroll;
+  gap: 30px;
+}
+
+.content__list {
+  gap: 30px; /*Разобраться с этим свойством */
+}
+.search-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
