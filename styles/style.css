@@ -58,7 +58,6 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1200px;
   gap: 30px;
 } 
 
@@ -68,13 +67,15 @@ ol {
 }
 
 .result__video-container {
-  gap: 16px;
+  display: block;
   height: 386px;
   width: 711px;
 }
 
 .result__video {
-  object-fit: contain; /* РАСТЯНУТЬ ВИДЕО */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .content__details {
   align-content: flex-end;
@@ -84,19 +85,120 @@ ol {
 .title {
   padding-top: 133px;
   padding-bottom: 26px;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+}
+.content__accent {
+  color: #545050;
 }
 
 .content__list-container {
+  display: grid;
   height: 298px;
   overflow: scroll;
   gap: 30px;
 }
 
 .content__list {
-  gap: 30px; /*Разобраться с этим свойством */
+  display: grid;
+  gap: 30px;
 }
+
+.content__video-card {
+  display: flex;
+  align-content: flex-start;
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  min-width: 194px;
+  object-fit: contain;
+  object-position: right;
+
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
 .search-form {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+   color: rgba(255, 255, 255, 1);
+   font-family: Fira Sans Condensed;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 22px;
+   letter-spacing: 0%;
+   text-align: left;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  color: rgba(255, 255, 255, 1);
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap; /* НЕ РАБОТАЕТ МНОГОТОЧИЕ */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.content__video-card-description {
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  letter-spacing: 0%;
+  text-align: left;
+  display: -webkit-box;
+  line-clamp: 1;
+ -webkit-box-orient: vertical;/*НЕ РАБОТАЕТ МНОГОТОЧИЕ */
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap:57px
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 1.5px;
 }
