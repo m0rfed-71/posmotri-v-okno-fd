@@ -154,6 +154,9 @@ ol {
   display: block;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
 .content__card-link_current:active {
   background-color: #545050;
 }
@@ -227,6 +230,10 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label-text {
+  display: inline-block;
+}
+
 .search-form__textfield {
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -273,7 +280,7 @@ ol {
   opacity: 1;
 }
 
-.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+.search-form__label:focus-within {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -324,10 +331,12 @@ align-items: center;
   text-decoration: underline;
   cursor: pointer;
 }
+
 .more-button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
+
 .more-button:active {
   background-color: rgb(217 217 217 / 60%);
 }
